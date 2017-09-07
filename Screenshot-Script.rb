@@ -3,11 +3,11 @@
 require 'securerandom'
 require 'net/ftp'
 
-$ftpHost = "127.0.0.1"					# FTP Host address
-$ftpPort = 21						# FTP Port
-$ftpUsername = "username"				# FTP Username
-$ftpPassword = "password"				# FTP Password
-$ftpFolder = "/screenshots/"				# Folder to save screenshots in FTP
+$ftpHost = "127.0.0.1"								# FTP Host address
+$ftpPort = 21										# FTP Port
+$ftpUsername = "username"							# FTP Username
+$ftpPassword = "password"							# FTP Password
+$ftpFolder = "/screenshots/"						# Folder to save screenshots in FTP
 $screenshotUrl = "www.example.com/screenshots/"		# URL where screenshots are uploaded in FTP
 $destinationFolder = "/home/user/screenshots"		# Folder to locally save screenshots
 
