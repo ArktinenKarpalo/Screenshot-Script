@@ -11,7 +11,7 @@ $ftpFolder = "/screenshots/"						# Folder to save screenshots in FTP
 $screenshotUrl = "www.example.com/screenshots/"		# URL where screenshots are uploaded in FTP
 $destinationFolder = "/home/user/screenshots"		# Folder to locally save screenshots
 
-@fileName = "#{Time.now.strftime "%d-%m-%Y"}-#{SecureRandom.hex[0..6]}.png"
+@fileName = "#{Time.now.strftime "%d-%m-%Y"}-#{SecureRandom.urlsafe_base64[0..6]}.png"
 @filePath = "#{$destinationFolder}/#{@fileName}"
 `gnome-screenshot --area --file=#{@filePath}`
 
