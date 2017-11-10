@@ -22,3 +22,4 @@ ftp.putbinaryfile(File.new($ftpFolder+@filePath))
 ftp.close
 
 `echo -n #{$screenshotUrl}#{@fileName} | xclip -selection clipboard`
+`notify-send -u normal "Screenshot-Script" \\ "Screenshot taken URL copied to clipboard"`
