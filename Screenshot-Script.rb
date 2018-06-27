@@ -13,7 +13,7 @@ $destinationFolder = "/home/user/screenshots"		# Folder to locally save screensh
 
 @fileName = "#{Time.now.strftime "%d-%m-%Y"}-#{SecureRandom.urlsafe_base64[0..6]}.png"
 @filePath = "#{$destinationFolder}/#{@fileName}"
-`gnome-screenshot --area --file=#{@filePath}`
+`import #{@filePath}`
 
 ftp = Net::FTP.new
 ftp.connect($ftpHost, $ftpPort)
