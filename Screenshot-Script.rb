@@ -15,10 +15,10 @@ $destinationFolder = "/home/user/screenshots"		# Folder to locally save screensh
 @filePath = "#{$destinationFolder}/#{@fileName}"
 `import #{@filePath}`
 
+`echo -n #{$screenshotUrl}#{@fileName} | xclip -selection clipboard`
+
 ftp = Net::FTP.new
 ftp.connect($ftpHost, $ftpPort)
 ftp.login($ftpUsername, $ftpPassword)
 ftp.putbinaryfile(File.new($ftpFolder+@filePath))
 ftp.close
-
-`echo -n #{$screenshotUrl}#{@fileName} | xclip -selection clipboard`
