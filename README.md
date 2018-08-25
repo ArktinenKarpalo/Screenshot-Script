@@ -6,5 +6,3 @@ clipboard.
 
 ### Dependencies:
 * xclip
-* notify-send
-* gnome-screenshot
