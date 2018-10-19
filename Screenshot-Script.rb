@@ -20,7 +20,7 @@ $destinationFolder = "/home/user/screenshots"
 
 @fileName = "#{Time.now.strftime "%d-%m-%Y"}-#{SecureRandom.urlsafe_base64[0..6]}.png"
 @filePath = "#{$destinationFolder}/#{@fileName}"
-`import #{@filePath}`
+`maim -s #{@filePath}`
 
 `echo -n #{$screenshotUrl}#{@fileName} | xclip -selection clipboard -f`
 
